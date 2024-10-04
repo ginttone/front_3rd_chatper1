@@ -1,7 +1,7 @@
 /** @jsx createVNode */
 import { createVNode } from "../lib";
 import { globalStore } from "../stores";
-import { Header, Navigation, Footer } from "../components";
+import { Header, Navigation, Footer } from "../components/templates";
 
 export const ProfilePage = () => {
   const { loggedIn, currentUser } = globalStore.getState();
@@ -63,7 +63,7 @@ export const ProfilePage = () => {
                   rows="4"
                   className="w-full p-2 border rounded"
                 >
-                  ${bio}
+                  {bio}
                 </textarea>
               </div>
               <button
